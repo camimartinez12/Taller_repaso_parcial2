@@ -1,0 +1,106 @@
+/* pagina */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+}
+
+/* cuadricula de productos: 4 columnas (antes decia #product) */
+#products {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* card de cada producto (antes decia .productCard) */
+.product-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  padding-bottom: 12px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; /* para que la imagen respete las esquinas redondeadas */
+}
+
+.product-image {
+  width: 100%;
+  height: 170px;
+  object-fit: cover; /* recorta la imagen sin deformarla */
+}
+
+.titleProductStyle {
+  font-size: 18px;
+  margin: 12px 12px 6px;
+}
+
+.product-description {
+  color: #555;
+  font-size: 14px;
+  margin: 0 12px;
+}
+
+.product-price {
+  font-weight: bold;
+  color: #444;
+  margin: 12px;
+}
+
+/* botones */
+.cart-btn,
+.reviews-btn {
+  background-color: #3478f6;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 8px;
+  margin: 6px 12px;
+  cursor: pointer;
+}
+
+.reviews-btn {
+  align-self: flex-start; /* el boton de reseñas no ocupa todo el ancho */
+}
+
+/* boton cuando ya se agrego al carrito */
+.cart-btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* lista de reseñas */
+.reviews-list {
+  list-style: none;
+  padding: 0;
+  margin: 6px 12px 0;
+  border-top: 1px solid #eee;
+}
+
+.review-item {
+  background-color: #f9f9f9;
+  border-radius: 4px;
+  padding: 8px;
+  margin-top: 8px;
+}
+
+.review-item p {
+  margin: 4px 0;
+  font-size: 14px;
+}
+
+.review-date {
+  font-size: 12px;
+  color: #888;
+}
+
+/* clase para ocultar las reseñas */
+.oculto {
+  display: none;
+}
